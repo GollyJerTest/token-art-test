@@ -1,0 +1,92 @@
+{
+  "id": "[YOU MUST REQUEST A UNIQUE ID]",
+  "chain": "",
+  "name": "",
+  "images": {
+    "avatar": "",
+    "banner": ""
+  },
+  "description": "",
+  "sets": [
+    {
+      "name": "Series 1",
+      "images": {
+        "avatar": "",
+        "banner": ""
+      },
+      "description": "",
+      "assets": [
+        {
+          "assetId": "Card 1",
+          "name": "",
+          "images": {
+            "primary": "",
+            "other": [""]
+          },
+          "artists": [
+            {
+              "name": "",
+              "link": ""
+            }
+          ],
+          "subAssets": []
+        },
+        {
+          "assetId": "Card 2",
+          "name": "",
+          "images": {
+            "primary": "",
+            "other": [""]
+          },
+          "artists": [
+            {
+              "name": "",
+              "link": ""
+            }
+          ],
+          "subAssets": []
+        }
+      ]
+    },
+    {
+      "name": "Series 2",
+      "images": {
+        "avatar": "",
+        "banner": ""
+      },
+      "description": "",
+      "assets": [
+        {
+          "assetId": "Card 1",
+          "name": "",
+          "images": {
+            "primary": "",
+            "other": [""]
+          },
+          "artists": [
+            {
+              "name": "",
+              "link": ""
+            }
+          ],
+          "subAssets": []
+        },
+        {
+          "assetId": "Card 2",
+          "name": "",
+          "images": {
+            "primary": "",
+            "other": [""]
+          },
+          "artists": [
+            {
+              "name": "",
+              "link": ""
+            }
+          ],
+          "subAssets": []
+        }
+      ]
+    }
+  ]
+}
