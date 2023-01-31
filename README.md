@@ -12,7 +12,7 @@ This repository contains community-curated NFT collection configurations that ar
 <br />
 
 ## Contributing
-Fork the repo, create (by copying [this JSON file](configuration-sample.json)) or edit a configuration file, and submit a pull-request! Here is the contributing doc that has more details.
+Fork the repo, create (by copying [this JSON file](configuration-sample.json)) or edit a configuration file, and submit a pull-request!
 
 
 ---
