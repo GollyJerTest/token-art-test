@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/token-art-logo.png" width="800" />
+<a href="https://token.art?from=github" target="_new"><img src="./assets/token-art-logo.png" width="800" /></a>
 
 <br />
 
@@ -15,17 +15,18 @@
 ---
 <br />
 
-This repository contains community-curated NFT collection configurations that are used by token.art to provide asset categorization by sets ("Series 1", "Series 2", etc.), additional details such as artist credits, custom collection icons, descriptions, and more!
+This repository contains community-curated NFT collection configurations that are used by [token.art](https://token.art?from=github) to provide asset categorization by sets ("Series 1", "Series 2", etc.), additional details such as artist credits, custom collection icons, descriptions, and more!
 
 <br />
 
 ## Contributing
-1. Fork the repo, create a new collection config (by copying [this JSON file](configuration-sample.json)) or edit an existing collection configuration file, and submit a pull-request!
+Fork the repo, create a new collection config (by copying [this JSON file](configuration-sample.json)) or edit an existing collection configuration file, and submit a pull-request!
 
 
 ---
 <br />
 
-_Follow <a href="https://twitter.com/TokenArtApp">@TokenArtApp</a> for news and updates!_
-  
+_Follow <a href="https://twitter.com/TokenArtApp">@TokenArtApp</a> on Twitter for news and updates!_
+
+_Join our <a href="https://twitter.com/TokenArtApp">Discord</a> for general questions, feature requests, and bug reports_
 </div>
