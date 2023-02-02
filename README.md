@@ -1,7 +1,7 @@
 # token-art
 <div align="center">
 
-<a href="https://token.art?from=github" target="_new"><img src="./assets/token-art-logo.png" width="800" /></a>
+<a href="https://token.art?from=github" target="_new"><img src="https://raw.githubusercontent.com/AwesomeLabs/token-art-test/main/assets/token-art-logo.png" width="800" /></a>
 
 <br />
 
