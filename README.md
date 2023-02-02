@@ -9,7 +9,7 @@
   All your NFTs in one place!
 </p>
 
-[![Twitter](https://img.shields.io/badge/follow-%40tokenartapp-b800e6?logo=twitter&style=for-the-badge)](https://twitter.com/tokenartapp) 
+[![Twitter](https://img.shields.io/badge/follow-%40tokenartapp-b800e6?logo=twitter&style=for-the-badge)](https://twitter.com/tokenartapp)
 [![Discord](https://img.shields.io/badge/join-discord-b800e6?logo=discord&style=for-the-badge)](https://discord.gg/NCBg4a4ddY)
 [![GitHub Super-Linter](https://github.com/AwesomeLabs/token-art-test/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
@@ -32,4 +32,3 @@ Follow the instructions here and fork this repository, create a new branch, crea
 _Follow <a href="https://twitter.com/TokenArtApp">@TokenArtApp</a> on Twitter for news and updates!_
 
 _Join our <a href="https://twitter.com/TokenArtApp">Discord</a> for general questions, feature requests, and bug reports_
-</div>
