@@ -11,6 +11,7 @@
 
 [![Twitter](https://img.shields.io/badge/follow-%40tokenartapp-b800e6?logo=twitter&style=for-the-badge)](https://twitter.com/tokenartapp)
 [![Discord](https://img.shields.io/badge/join-discord-b800e6?logo=discord&style=for-the-badge)](https://discord.gg/NCBg4a4ddY)
+
 [![GitHub Super-Linter](https://github.com/AwesomeLabs/token-art-test/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 </div>
