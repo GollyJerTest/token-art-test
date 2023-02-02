@@ -23,7 +23,7 @@ This repository contains community-curated NFT collection configurations that ar
 <br />
 
 ## Contributing
-Follow the instructions here and fork this repository, create a new branch, create a new collection config (by copying [this JSON file](TEMPLATES/configuration-sample.json)) or edit an existing collection configuration file, and submit a pull-request!
+Follow the instructions here and fork this repository, create a new branch, create a new collection config (by copying [this JSON file](./TEMPLATES/configuration-sample.json)) or edit an existing collection configuration file, and submit a pull-request!
 
 
 ---
