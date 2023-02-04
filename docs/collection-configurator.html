@@ -6,57 +6,76 @@
     <link rel="stylesheet" href="https://unpkg.com/mvp.css@1.12/mvp.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap");
+
       body {
         font-family: "Roboto";
         font-size: 1.1em;
       }
+
       header {
         padding: 0;
       }
+
       main {
         padding: 0;
       }
+
       hr {
         margin: 0;
       }
+
       h1 {
         font-size: 1.5rem;
       }
+
       input[type="text"] {
         width: calc(25% - 1.6rem);
       }
+
       textarea {
         width: calc(50% - 1.6rem);
       }
+
       button {
         padding: 0.2rem 0.5rem;
         background-color: chartreuse;
         border-color: chartreuse;
       }
+
+      required {
+        color: red;
+      }
+
       .asset-button {
         background-color: violet;
         border-color: violet;
       }
+
       .generate-button {
         background-color: aquamarine;
         border-color: aquamarine;
       }
+
       .assets-container {
         margin-left: 2rem;
         padding-left: 0.5rem;
         border-left: 1px solid white;
       }
+
       .sets-container {
         margin-bottom: 4rem;
       }
+
       .set-container {
         margin-bottom: 2rem;
       }
+
       .json-output-container {
         padding-top: 2rem;
       }
     </style>
   </head>
+
   <body>
     <header>
       <h1>token.art Collection Configurator</h1>
@@ -67,23 +86,30 @@
       <h2>1. Collection Details</h2>
       <div class="form-group">
         <label for="collection-id"
-          >Collection ID: <sup>assigned to you</sup></label
+          >Collection ID: <required>*</required>
+          <sup>assigned to you</sup></label
         >
         <input type="text" id="collection-id" name="collection-id" required />
       </div>
       <div class="form-group">
-        <label for="collection-chain-id">Collection Chain:</label>
+        <label for="collection-chain-id"
+          >Collection Chain: <required>*</required></label
+        >
         <select id="collection-chain-id" required>
           <option value="counterparty">Counterparty</option>
           <option value="dogeparty">Dogeparty</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="collection-name">Collection Name:</label>
+        <label for="collection-name"
+          >Collection Name: <required>*</required></label
+        >
         <input type="text" id="collection-name" required />
       </div>
       <div class="form-group">
-        <label for="collection-avatar-url">Collection Avatar URL:</label>
+        <label for="collection-avatar-url"
+          >Collection Avatar URL: <required>*</required></label
+        >
         <input type="text" id="collection-avatar-url" required />
       </div>
       <div class="form-group">
@@ -136,11 +162,11 @@
           <div id="set${setCounter}" class="set-container">
             <h3>Set ${setCounter}</h3>
             <div class="form-group">
-              <label for="set${setCounter}-name">Set Name:</label>
+              <label for="set${setCounter}-name">Set Name: <required>*</required> <sup>Series 1, etc.</sup></label>
               <input type="text" id="set${setCounter}-name" name="set${setCounter}-name" required />
             </div>
             <div class="form-group">
-              <label for="set${setCounter}-avatar-url">Set Avatar URL:</label>
+              <label for="set${setCounter}-avatar-url">Set Avatar URL: <required>*</required></label>
               <input type="text" id="set${setCounter}-avatar-url" name="set${setCounter}-avatar-url" required/>
             </div>
             <div class="form-group">
@@ -175,15 +201,15 @@
           <div id="set${setId}-asset-${assetCounter}" class="asset">
             <h4>Asset</h4>
             <div class="form-group">
-              <label for="set${setId}-asset${assetCounter}-id">Asset ID: <sup>Token ID</sup></label>
-              <input type="text" id="set${setId}-asset${assetCounter}-id" name="set${setId}-asset${assetCounter}-id" required />
-            </div>
-            <div class="form-group">
-              <label for="set${setId}-asset${assetCounter}-name">Asset Name: </label>
+              <label for="set${setId}-asset${assetCounter}-name">Asset Name: <required>*</required> <sup>FDCARD, etc.</sup></label>
               <input type="text" id="set${setId}-asset${assetCounter}-name" name="set${setId}-asset${assetCounter}-name" required />
             </div>
             <div class="form-group">
-              <label for="set${setId}-asset${assetCounter}-primary-url">Asset Primary Image URL: </label>
+              <label for="set${setId}-asset${assetCounter}-id">Asset ID: <sup>Card 1, etc.</sup></label>
+              <input type="text" id="set${setId}-asset${assetCounter}-id" name="set${setId}-asset${assetCounter}-id" />
+            </div>
+            <div class="form-group">
+              <label for="set${setId}-asset${assetCounter}-primary-url">Asset Primary Image URL: <required>*</required></label>
               <input type="text" id="set${setId}-asset${assetCounter}-primary-url" name="set${setId}-asset${assetCounter}-primary-url" required />
             </div>
             <div class="form-group">
