@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html color-mode="user">
   <head>
     <title>token.art Collection Configurator</title>
@@ -32,26 +33,26 @@
         background-color: chartreuse;
         border-color: chartreuse;
       }
-      .assetButton {
+      .asset-button {
         background-color: violet;
         border-color: violet;
       }
-      .generateButton {
+      .generate-button {
         background-color: aquamarine;
         border-color: aquamarine;
       }
-      .assetsContainer {
+      .assets-container {
         margin-left: 2rem;
         padding-left: 0.5rem;
         border-left: 1px solid white;
       }
-      .setsContainer {
+      .sets-container {
         margin-bottom: 4rem;
       }
-      .setContainer {
+      .set-container {
         margin-bottom: 2rem;
       }
-      .jsonOutputContainer {
+      .json-output-container {
         padding-top: 2rem;
       }
     </style>
@@ -64,56 +65,56 @@
       <hr />
 
       <h2>1. Collection Details</h2>
-      <div class="formGroup">
-        <label for="collectionId"
+      <div class="form-group">
+        <label for="collection-id"
           >Collection ID: <sup>assigned to you</sup></label
         >
-        <input type="text" id="collectionId" name="collectionId" />
+        <input type="text" id="collection-id" name="collection-id" required />
       </div>
-      <div class="formGroup">
-        <label for="collectionChainId">Collection Chain:</label>
-        <select id="collectionChainId">
+      <div class="form-group">
+        <label for="collection-chain-id">Collection Chain:</label>
+        <select id="collection-chain-id" required>
           <option value="counterparty">Counterparty</option>
           <option value="dogeparty">Dogeparty</option>
         </select>
       </div>
-      <div class="formGroup">
-        <label for="collectionName">Collection Name:</label>
-        <input type="text" id="collectionName" />
+      <div class="form-group">
+        <label for="collection-name">Collection Name:</label>
+        <input type="text" id="collection-name" required />
       </div>
-      <div class="formGroup">
-        <label for="collectionAvatarUrl">Collection Avatar URL:</label>
-        <input type="text" id="collectionAvatarUrl" />
+      <div class="form-group">
+        <label for="collection-avatar-url">Collection Avatar URL:</label>
+        <input type="text" id="collection-avatar-url" required />
       </div>
-      <div class="formGroup">
-        <label for="collectionBannerUrl">Collection Banner URL:</label>
-        <input type="text" id="collectionBannerUrl" />
+      <div class="form-group">
+        <label for="collection-banner-url">Collection Banner URL:</label>
+        <input type="text" id="collection-banner-url" />
       </div>
-      <div class="formGroup">
-        <label for="collectionDescription">Collection Description:</label>
-        <input type="text" id="collectionDescription" />
+      <div class="form-group">
+        <label for="collection-description">Collection Description:</label>
+        <input type="text" id="collection-description" />
       </div>
 
       <hr />
 
       <h2>2. Sets/Series</h2>
-      <div id="setsContainer" class="setsContainer">
-        <div id="setsContainerInner"></div>
-        <button id="addSet" onclick="addSet()">Add a Set</button>
+      <div id="sets-container" class="sets-container">
+        <div id="sets-container-inner"></div>
+        <button id="add-set" onclick="addSet()">Add a Set</button>
       </div>
 
       <hr />
 
-      <div id="jsonOutputContainer" class="jsonOutputContainer">
+      <div id="json-output-container" class="json-output-container">
         <h2>3. JSON Output</h2>
         <button
-          id="generateJSON"
-          class="generateButton"
+          id="generate-button"
+          class="generate-button"
           onclick="generateJSON()"
         >
           Generate JSON
         </button>
-        <textarea id="jsonOutput" rows="20" cols="60"></textarea>
+        <textarea id="json-output" rows="20" cols="60"></textarea>
       </div>
     </main>
 
@@ -130,30 +131,30 @@
         };
         sets.push(setObject);
 
-        const setsContainer = document.getElementById("setsContainerInner");
+        const setsContainer = document.getElementById("sets-container-inner");
         const setTemplate = `
-          <div id="set${setCounter}" class="setContainer">
+          <div id="set${setCounter}" class="set-container">
             <h3>Set ${setCounter}</h3>
-            <div class="formGroup">
-              <label for="set${setCounter}Name">Set Name:</label>
-              <input type="text" id="set${setCounter}Name" name="set${setCounter}Name" required>
+            <div class="form-group">
+              <label for="set${setCounter}-name">Set Name:</label>
+              <input type="text" id="set${setCounter}-name" name="set${setCounter}-name" required />
             </div>
-            <div class="formGroup">
-              <label for="set${setCounter}AvatarUrl">Set Avatar URL:</label>
-              <input type="text" id="set${setCounter}AvatarUrl" name="set${setCounter}AvatarUrl" required>
+            <div class="form-group">
+              <label for="set${setCounter}-avatar-url">Set Avatar URL:</label>
+              <input type="text" id="set${setCounter}-avatar-url" name="set${setCounter}-avatar-url" required/>
             </div>
-            <div class="formGroup">
-              <label for="set${setCounter}BannerUrl">Set Banner URL:</label>
-              <input type="text" id="set${setCounter}BannerUrl" name="set${setCounter}BannerUrl" required>
+            <div class="form-group">
+              <label for="set${setCounter}-banner-url">Set Banner URL:</label>
+              <input type="text" id="set${setCounter}-banner-url" name="set${setCounter}-banner-url" />
             </div>
-            <div class="formGroup">
-              <label for="set${setCounter}Description">Set Description:</label>
-              <input type="text" id="set${setCounter}Description" name="set${setCounter}Description" required>
+            <div class="form-group">
+              <label for="set${setCounter}-description">Set Description:</label>
+              <input type="text" id="set${setCounter}-description" name="set${setCounter}-description" />
             </div>
-            <div class="assetsContainer">
+            <div class="assets-container">
               <h3>Set ${setCounter} Assets</h3>
-              <div class="assetsContainerInner" id="set${setCounter}AssetsContainer"></div>
-              <button type="button" onclick="addAsset(${setCounter})" class="assetButton">Add an Asset</button>
+              <div class="assets-container-inner" id="set${setCounter}-assets-container"></div>
+              <button type="button" onclick="addAsset(${setCounter})" class="asset-button">Add an Asset</button>
             </div>`;
 
         setsContainer.insertAdjacentHTML("beforeend", setTemplate);
@@ -167,43 +168,43 @@
         set.assetIds.push(assetCounter);
 
         const assetsContainer = document.getElementById(
-          `set${setId}AssetsContainer`
+          `set${setId}-assets-container`
         );
 
         const assetTemplate = `
-          <div id="set${setId}asset${assetCounter}" class="asset">
+          <div id="set${setId}-asset-${assetCounter}" class="asset">
             <h4>Asset</h4>
-            <div class="formGroup">
-              <label for="set${setId}Asset${assetCounter}Id">Asset ID: <sup>Token ID</sup></label>
-              <input type="text" id="set${setId}Asset${assetCounter}Id" name="set${setId}Asset${assetCounter}Id" required />
+            <div class="form-group">
+              <label for="set${setId}-asset${assetCounter}-id">Asset ID: <sup>Token ID</sup></label>
+              <input type="text" id="set${setId}-asset${assetCounter}-id" name="set${setId}-asset${assetCounter}-id" required />
             </div>
-            <div class="formGroup">
-              <label for="set${setId}Asset${assetCounter}Name">Asset Name: </label>
-              <input type="text" id="set${setId}Asset${assetCounter}Name" name="set${setId}Asset${assetCounter}Name" required />
+            <div class="form-group">
+              <label for="set${setId}-asset${assetCounter}-name">Asset Name: </label>
+              <input type="text" id="set${setId}-asset${assetCounter}-name" name="set${setId}-asset${assetCounter}-name" required />
             </div>
-            <div class="formGroup">
-              <label for="set${setId}Asset${assetCounter}PrimaryUrl">Asset Primary Image URL: </label>
-              <input type="text" id="set${setId}Asset${assetCounter}PrimaryUrl" name="set${setId}Asset${assetCounter}PrimaryUrl" required />
+            <div class="form-group">
+              <label for="set${setId}-asset${assetCounter}-primary-url">Asset Primary Image URL: </label>
+              <input type="text" id="set${setId}-asset${assetCounter}-primary-url" name="set${setId}-asset${assetCounter}-primary-url" required />
             </div>
-            <div class="formGroup">
-              <label for="set${setId}Asset${assetCounter}PrimaryUrl">Asset Other Image URL: </label>
-              <input type="text" id="set${setId}Asset${assetCounter}OtherUrl" name="set${setId}Asset${assetCounter}OtherUrl" required />
+            <div class="form-group">
+              <label for="set${setId}-asset${assetCounter}-other-url">Asset Other Image URL: </label>
+              <input type="text" id="set${setId}-asset${assetCounter}-other-url" name="set${setId}-asset${assetCounter}-other-url" />
             </div>
-            <div class="formGroup">
-              <label for="set${setId}Asset${assetCounter}Artist1Name">Artist 1 Name: </label>
-              <input type="text" id="set${setId}Asset${assetCounter}Artist1Name" name="set${setId}Asset${assetCounter}Artist1Name"/>
+            <div class="form-group">
+              <label for="set${setId}-asset${assetCounter}-artist1-name">Artist 1 Name: </label>
+              <input type="text" id="set${setId}-asset${assetCounter}-artist1-name" name="set${setId}-asset${assetCounter}-artist1-name" />
             </div>
-            <div class="formGroup">
-              <label for="set${setId}Asset${assetCounter}Artist1Url">Artist 1 URL: </label>
-              <input type="text" id="set${setId}Asset${assetCounter}Artist1Url" name="set${setId}Asset${assetCounter}Artist1Url"/>
+            <div class="form-group">
+              <label for="set${setId}-asset${assetCounter}-artist1-url">Artist 1 URL: </label>
+              <input type="text" id="set${setId}-asset${assetCounter}-artist1-url" name="set${setId}-asset${assetCounter}-artist1-url" />
             </div>
-            <div class="formGroup">
-              <label for="set${setId}Asset${assetCounter}Artist2Name">Artist 2 Name: </label>
-              <input type="text" id="set${setId}Asset${assetCounter}Artist2Name" name="set${setId}Asset${assetCounter}Artist2Name"/>
+            <div class="form-group">
+              <label for="set${setId}-asset${assetCounter}-artist2-name">Artist 2 Name: </label>
+              <input type="text" id="set${setId}-asset${assetCounter}-artist2-name" name="set${setId}-asset${assetCounter}-artist2-name" />
             </div>
-            <div class="formGroup">
-              <label for="set${setId}Asset${assetCounter}Artis2Url">Artist 2 URL: </label>
-              <input type="text" id="set${setId}Asset${assetCounter}Artist2Url" name="set${setId}Asset${assetCounter}Artist2Url"/>
+            <div class="form-group">
+              <label for="set${setId}-asset${assetCounter}-artist2-url">Artist 2 URL: </label>
+              <input type="text" id="set${setId}-asset${assetCounter}-artist2-url" name="set${setId}-asset${assetCounter}-artist2-url" />
             </div>
         `;
 
@@ -220,16 +221,16 @@
           // TODO: make this dynamic
           let artistsJson = [];
           let artist1Name = document.getElementById(
-            `set${setId}Asset${assetId}Artist1Name`
+            `set${setId}-asset${assetId}-artist1-name`
           ).value;
           let artist1Url = document.getElementById(
-            `set${setId}Asset${assetId}Artist1Url`
+            `set${setId}-asset${assetId}-artist1-url`
           ).value;
           let artist2Name = document.getElementById(
-            `set${setId}Asset${assetId}Artist2Name`
+            `set${setId}-asset${assetId}-artist2-name`
           ).value;
           let artist2Url = document.getElementById(
-            `set${setId}Asset${assetId}Artist2Url`
+            `set${setId}-asset${assetId}-artist2-url`
           ).value;
           if (artist1Name !== "") {
             artistsJson.push({
@@ -246,20 +247,22 @@
 
           let assetJson = {
             assetId: `${
-              document.getElementById(`set${setId}Asset${assetId}Id`).value
+              document.getElementById(`set${setId}-asset${assetId}-id`).value
             }`,
             name: `${
-              document.getElementById(`set${setId}Asset${assetId}Name`).value
+              document.getElementById(`set${setId}-asset${assetId}-name`).value
             }`,
             images: {
               primary: `${
-                document.getElementById(`set${setId}Asset${assetId}PrimaryUrl`)
-                  .value
+                document.getElementById(
+                  `set${setId}-asset${assetId}-primary-url`
+                ).value
               }`,
               other: [
                 `${
-                  document.getElementById(`set${setId}Asset${assetId}OtherUrl`)
-                    .value
+                  document.getElementById(
+                    `set${setId}-asset${assetId}-other-url`
+                  ).value
                 }`,
               ],
             },
@@ -274,17 +277,17 @@
         let setsJson = [];
         sets.forEach((set) => {
           let setJson = {
-            name: `${document.getElementById(`set${set.id}Name`).value}`,
+            name: `${document.getElementById(`set${set.id}-name`).value}`,
             images: {
               avatar: `${
-                document.getElementById(`set${set.id}AvatarUrl`).value
+                document.getElementById(`set${set.id}-avatar-url`).value
               }`,
               banner: `${
-                document.getElementById(`set${set.id}BannerUrl`).value
+                document.getElementById(`set${set.id}-banner-url`).value
               }`,
             },
             description: `${
-              document.getElementById(`set${set.id}Description`).value
+              document.getElementById(`set${set.id}-description`).value
             }`,
             assets: generateAssetsJson(set.id),
             subAssets: [],
@@ -297,26 +300,22 @@
       const generateJSON = () => {
         let setsJson = generateSetsJson();
 
-        let jsonData = `{
-  "id": ${JSON.stringify(document.getElementById("collectionId").value)},
-  "chain": ${JSON.stringify(
-    document.getElementById("collectionChainId").value
-  )},
-  "name": ${JSON.stringify(document.getElementById("collectionName").value)},
-  "images": {
-    "avatar": ${JSON.stringify(
-      document.getElementById("collectionAvatarUrl").value
-    )},
-    "banner": ${JSON.stringify(
-      document.getElementById("collectionBannerUrl").value
-    )}
-  },
-  "description": ${JSON.stringify(
-    document.getElementById("collectionDescription").value
-  )},
-  "sets": ${JSON.stringify(setsJson, null, 2)}
-}`;
-        document.getElementById("jsonOutput").value = jsonData;
+        let jsonData = {
+          id: document.getElementById("collection-id").value,
+          chain: document.getElementById("collection-chain-id").value,
+          name: document.getElementById("collection-name").value,
+          images: {
+            avatar: document.getElementById("collection-avatar-url").value,
+            banner: document.getElementById("collection-banner-url").value,
+          },
+          description: document.getElementById("collection-description").value,
+          sets: setsJson,
+        };
+        document.getElementById("json-output").value = JSON.stringify(
+          jsonData,
+          null,
+          2
+        );
       };
     </script>
   </body>
