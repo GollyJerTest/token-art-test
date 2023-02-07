@@ -13,12 +13,35 @@
 </div>
 
 ---
-This repository contains community-curated NFT collection configurations that are used by
-[token.art](https://token.art?from=github) to provide asset categorization by sets ("Series 1",
-"Series 2", etc.), additional details such as artist credits, custom collection icons, descriptions,
-and more!
+This repository contains NFT collection configurations used by by the
+[token.art](https://token.art?from=github) to provide token categorization details for NFTs that
+don't have this information on-chain.
+
+These configurations help organize NFTs into collections and provide additional details such as
+artist credits, custom collection icons, descriptions and more!
+
+The goal, and token.art's mission, is to make the collector experience more enjoyable.
+
+<br />
 
 ## Contributing
+You can be a collection "owner" or "curator" and help us keep the collection configurations up to
+date.
+
+- If a collection configuration doesn't yet exist, reach out via [Twitter](https://twitter.com/TokenArtApp) or
+  [Discord](https://discord.gg/NCBg4a4ddY) to discuss. We will create a
+  configuration folder in the repo.
+- Create a github account if you don't have one already.
+- Navigate to https://github.dev/AwesomeLabs/token-art-test. An editor environment will be launched.   
+- In the file explorer, navigate to the `collections` folder and click on the json file.
+- You can edit the json file by hand, or use our [configurator
+  tool](https://awesomelabs.github.io/token-art/collection-configurator/) to generate and then paste
+  in the json file. 
+  
+ 
+ 
+
+
 Follow the instructions here and fork this repository, create a new branch, create a new collection config (by copying [this JSON file](./TEMPLATES/configuration-sample.json)) or edit an existing collection configuration file, and submit a pull-request!
 
 
